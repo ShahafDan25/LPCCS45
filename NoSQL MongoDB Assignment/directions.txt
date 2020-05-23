@@ -1,0 +1,10 @@
+INSTRUCTIONS:
+-------------------------
+Use the following command to run the script in your terminal (applied to MongoDB Script in JavaScript)
+
+
+mongo -u USERNAME_ID -p --host HOSTNAME --authenticationDatabase "admin" < mongoldb.js
+
+It will prompt you for a password, enter the password
+
+

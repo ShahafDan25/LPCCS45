@@ -1,0 +1,8 @@
+INSTRUCTIONS:
+-------------------------
+Use the following command to run the script in your terminal (applied to Linux)
+
+
+scriptreplay -d 5 -timing=scriptProject.timing scriptProject.script
+
+

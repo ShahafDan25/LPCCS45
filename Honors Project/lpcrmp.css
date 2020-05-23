@@ -1,0 +1,194 @@
+.cover
+{
+    padding-top: 2% !important;
+    background-color: rgba(193,66,66, 0.82);
+    padding-bottom: 2% !important;
+    margin-bottom: 1% !important;
+    border-bottom: 4px solid black !important;
+    width: 100% !important;
+}
+.titler{font-family: 'Lobster', cursive !important; }
+.left {text-align: left !important;}
+.right {text-align: right !important;}
+.wider {margin-right: 2% !important; margin-left: 2% !important;}
+.sm2
+{
+    /* side margin 2% */
+    margin-right: 2% !important;
+    margin-left: 2% !important;
+}
+.sp2
+{
+    padding-right: 2% !important;
+    padding-left: 2% !important;
+}
+.body
+{
+    background-image: linear-gradient(  #aaaaaa, #EEEEEE) !important;
+    text-align: center;
+    padding-bottom: 10px !important;
+}
+.objectives
+{
+    padding-left: 35% !important;
+    padding-right: 35% !important;
+}
+.btn{border: 1px solid black !important;}
+.sep {width: 80% !important;}
+.inline{display: inline-block !important; display:flex; flex-direction: row;}
+.option_a, .option_b, .option_c
+{
+    display: inline-block !important;
+    width: 30% !important;
+    padding-right: 4% !important;
+    padding-left: 4% !important;
+}
+.optionForm
+{
+    background-color: white;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom: 1.5px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 2% !important;
+    width: 100% !important;
+    text-align: center;
+}
+.centrize
+{
+    text-align: center;
+}
+.sidePadder5
+{
+    padding-right: 5% !important;
+    padding-left: 5% !important; 
+}
+.sideMargger5
+{
+    margin-right: 5% !important;
+    margin-left: 5% !important;
+}
+.increaseHeight {height: 2.0vw !important;}
+.btn-input{background-color: #ECF6F9 !important;}
+.checkboxer
+{
+    background-color: bisque;
+    padding-right: 2% !important;
+    padding-left: 2% !important;
+    margin-right: 1% !important;
+    margin-left: 1% !important;
+}
+.btnSelect
+{
+    height: 2vw !important;
+    /* background-color:  ; */
+}
+.commentForm
+{
+    border-radius: 5px;
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+    padding: 1.5% !important;
+    background-color: white;
+    margin-right: 22% !important;
+    margin-left: 22% !important;
+}
+.thinner
+{
+    width: 60% !important;
+    margin-left: 25% !important;
+    margin-right: 25% !important;
+}
+
+/* ---------------------------------------------
+** ------------- ADMIN.PHP ---------------------
+** ------------------------------------------ */
+
+.selectCourse
+{
+    background-color: white;
+    border-radius: 5px !important;
+    border: 1.5px solid black !important; 
+}
+
+.optionTable
+{
+    background-color:white;
+    margin-right: 10% !important;
+    margin-left: 10% !important;
+    border: 3px solid black !important;
+    padding-right: 5% !important;
+    padding-left: 5% !important;
+    width: 80% !important;
+}
+.noMargs
+{
+    /* meant to override the important override */
+    margin: 0% !important;
+}
+.w60{margin-right: 20% !important; margin-left: 20% !important;}
+.w85{margin-right:7.5% !important; margin-left: 7.5% !important;}
+.framer
+{
+    background-attachment: fixed;
+    margin-top: 2% !important;
+    background-color: rgba(255, 228, 227, 0.42) !important;
+    border: 3px solid black !important;
+    margin-bottom: 4% !important;
+    padding-top: 1% !important;
+    padding-bottom: 1% !important;
+    padding-right: 2% !important;
+    padding-left: 2% !important;
+}
+.footer
+{
+    /* background-color: white; */
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding-top: 01.2% !important;
+    padding-bottom : 0.5% !important;
+    margin-top: 5% !important;
+    margin-bottom: 1% !important;
+    background-image: url('graphics/bg5.png');
+    background-repeat: no-repeat;
+    background-position: center !important; 
+    background-size: 100% !important;   
+}
+
+.graphicalMorris
+{
+    text-align: center !important;
+    border: 2px solid black !important;
+    border-radius: 5px !important;
+    padding: 1% !important;
+    margin-top: 1% !important;
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+    background-color: white !important;
+}
+
+/* ---------------------------------------------
+** ------------- READ.PHP ---------------------
+** ------------------------------------------ */
+.commentTable
+{
+    background-color: white;
+    border: 3px solid black;
+    /* /width: 80% !important; */
+    padding-right: 3% !important;
+    padding-left: 3% !important;
+    padding-top: 1.5% !important;
+    
+}
+.container
+{
+    height: 100% !important;
+    background: url('graphics/lpccampus.jpeg') !important; 
+    text-align: center !important; 
+    width: 100% !important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important; 
+    background-size: 100% !important; 
+    background-attachment: fixed !important;
+}

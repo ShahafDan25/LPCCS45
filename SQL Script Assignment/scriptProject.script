@@ -1,0 +1,208 @@
+Script started on 2020-04-23 18:18:54-0700
+]0;linuxuser@linuxuser-virtual-machine: ~linuxuser@linuxuser-virtual-machine:~$ HELLO WORLD OF SHAHAF [K"S[K[K's[Ks ASSIGNMENT!! TES TEST[K[K[K[K[K[KST TEST
+> ;
+> 
+> 
+> 
+> 
+> exit
+> ^C
+]0;linuxuser@linuxuser-virtual-machine: ~linuxuser@linuxuser-virtual-machine:~$ ssh cs45Student26@thekomanetskys.com:[K -p12345[K[K[K[K[K 12345
+cs45Student26@thekomanetskys.com's password: 
+Permission denied, please try again.
+cs45Student26@thekomanetskys.com's password: 
+Permission denied, please try again.
+cs45Student26@thekomanetskys.com's password: 
+Last login: Thu Apr 23 18:03:57 2020 from 71.202.94.115
+cs45Student26@mint-server:~$ mysql --host=thekomanetskys.com --pr[Kort=33066 -u cs45Student26 -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11213
+Server version: 5.7.29-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> sho[K[Khow sche,as[K[K[Kmas;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| cs45Student26      |
+| employees          |
++--------------------+
+3 rows in set (0.00 sec)
+
+mysql> use employees;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> DESCRIBE[K[K[K[K[K[K[K[Kshow tables;
++----------------------+
+| Tables_in_employees  |
++----------------------+
+| current_dept_emp     |
+| departments          |
+| dept_emp             |
+| dept_emp_latest_date |
+| dept_manager         |
+| employees            |
+| salaries             |
+| titles               |
++----------------------+
+8 rows in set (0.00 sec)
+
+mysql> DESCRIBE employees;
++------------+---------------+------+-----+---------+-------+
+| Field      | Type          | Null | Key | Default | Extra |
++------------+---------------+------+-----+---------+-------+
+| emp_no     | int(11)       | NO   | PRI | NULL    |       |
+| birth_date | date          | NO   |     | NULL    |       |
+| first_name | varchar(14)   | NO   |     | NULL    |       |
+| last_name  | varchar(16)   | NO   |     | NULL    |       |
+| gender     | enum('M','F') | NO   |     | NULL    |       |
+| hire_date  | date          | NO   |     | NULL    |       |
++------------+---------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> DE[K[KDESCRIBE employees;[K[K[K[K[K[K[K[K[K[K dept_emp;
++-----------+---------+------+-----+---------+-------+
+| Field     | Type    | Null | Key | Default | Extra |
++-----------+---------+------+-----+---------+-------+
+| emp_no    | int(11) | NO   | PRI | NULL    |       |
+| dept_no   | char(4) | NO   | PRI | NULL    |       |
+| from_date | date    | NO   |     | NULL    |       |
+| to_date   | date    | NO   |     | NULL    |       |
++-----------+---------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> DESCRIBE dept_emp;[K[K[K[K[K[K[K[K[Kdepartmens[Kts;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| dept_no   | char(4)     | NO   | PRI | NULL    |       |
+| dept_name | varchar(40) | NO   | UNI | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT a.emp_no, a._last_name[K[K[K[K[K[K[K[K[K[Klast_name, b.dept_name, c.front_date[K[K[K[K[K[K[Km_date FROM employees a,[K JOIN departments[K[K[K[K[K[K[K[Kt_emp c ON c.emp_no  = a.emp_no JOIN departments b ON b.dept_no = c.dept no[K[K[A[158G[K  [K[A[158Gt _no WHERE c.dept_no = "d005" AND c.toda[K[K_date = "9999-01-01" ORDER BY a.last_name LIMIT 100;
++--------+-----------+-------------+------------+
+| emp_no | last_name | dept_name   | from_date  |
++--------+-----------+-------------+------------+
+|  88280 | Aamodt    | Development | 1987-01-31 |
+| 407604 | Aamodt    | Development | 1990-07-25 |
+|  61477 | Aamodt    | Development | 1988-08-14 |
+|  15427 | Aamodt    | Development | 1998-02-15 |
+| 455119 | Aamodt    | Development | 1991-10-16 |
+| 258861 | Aamodt    | Development | 1985-03-02 |
+| 489981 | Aamodt    | Development | 1993-11-15 |
+| 236802 | Aamodt    | Development | 1999-04-26 |
+| 252763 | Aamodt    | Development | 1997-02-28 |
+|  84904 | Aamodt    | Development | 1991-08-10 |
+| 257801 | Aamodt    | Development | 2000-01-12 |
+| 102734 | Aamodt    | Development | 1995-09-23 |
+|  40184 | Aamodt    | Development | 1996-07-05 |
+| 493299 | Aamodt    | Development | 1998-09-08 |
+| 436560 | Aamodt    | Development | 1998-10-25 |
+| 438271 | Aamodt    | Development | 1997-04-12 |
+|  50775 | Aamodt    | Development | 1991-10-25 |
+| 484934 | Aamodt    | Development | 1985-03-31 |
+| 276963 | Aamodt    | Development | 1986-06-20 |
+| 467226 | Aamodt    | Development | 2002-07-30 |
+|  82381 | Aamodt    | Development | 1994-05-18 |
+|  36577 | Aamodt    | Development | 1995-04-29 |
+| 100916 | Aamodt    | Development | 1992-04-22 |
+|  53390 | Aamodt    | Development | 1987-08-13 |
+| 265228 | Aamodt    | Development | 1999-05-28 |
+| 458485 | Aamodt    | Development | 1990-10-29 |
+| 419084 | Aamodt    | Development | 1987-08-19 |
+| 458867 | Aamodt    | Development | 1995-01-31 |
+|  57989 | Aamodt    | Development | 1989-10-13 |
+| 258005 | Aamodt    | Development | 1996-10-26 |
+|  49426 | Aamodt    | Development | 1993-11-01 |
+| 471383 | Aamodt    | Development | 1988-01-03 |
+| 262822 | Aamodt    | Development | 1986-12-03 |
+|  12982 | Aamodt    | Development | 1992-01-11 |
+| 441722 | Aamodt    | Development | 1999-12-15 |
+| 265036 | Aamodt    | Development | 1985-02-11 |
+| 107602 | Aamodt    | Development | 1998-10-08 |
+| 458624 | Aamodt    | Development | 1991-05-14 |
+| 239949 | Aamodt    | Development | 1990-11-26 |
+| 460902 | Aamodt    | Development | 1997-08-15 |
+| 276101 | Aamodt    | Development | 1988-11-01 |
+| 256770 | Acton     | Development | 1994-10-30 |
+| 481114 | Acton     | Development | 1994-09-12 |
+| 272812 | Acton     | Development | 1992-05-04 |
+| 248334 | Acton     | Development | 1996-08-26 |
+|  30263 | Acton     | Development | 1996-09-27 |
+| 267789 | Acton     | Development | 1996-08-13 |
+| 228262 | Acton     | Development | 1992-10-01 |
+|  88998 | Acton     | Development | 1997-12-16 |
+|  51509 | Acton     | Development | 1994-02-26 |
+| 238752 | Acton     | Development | 1987-06-04 |
+| 429125 | Acton     | Development | 1997-06-30 |
+| 461027 | Acton     | Development | 1987-03-13 |
+| 446145 | Acton     | Development | 1995-06-28 |
+|  90793 | Acton     | Development | 1988-03-02 |
+| 481285 | Acton     | Development | 1990-10-07 |
+| 481482 | Acton     | Development | 1990-07-29 |
+| 412144 | Acton     | Development | 1990-12-16 |
+| 423543 | Acton     | Development | 1991-11-24 |
+|  90691 | Acton     | Development | 1997-01-22 |
+| 450884 | Acton     | Development | 1997-07-06 |
+| 286874 | Acton     | Development | 1991-12-07 |
+| 291696 | Acton     | Development | 1992-10-10 |
+| 285261 | Acton     | Development | 1989-07-17 |
+| 451043 | Acton     | Development | 1989-07-14 |
+|  27201 | Acton     | Development | 1989-04-14 |
+|  67813 | Acton     | Development | 1992-05-10 |
+| 468748 | Acton     | Development | 1997-06-10 |
+|  72001 | Acton     | Development | 1987-10-29 |
+|  47143 | Acton     | Development | 1995-07-14 |
+| 218928 | Acton     | Development | 1999-05-21 |
+| 255705 | Acton     | Development | 1995-01-22 |
+| 107283 | Acton     | Development | 1985-07-07 |
+| 279788 | Acton     | Development | 1990-11-27 |
+|  40908 | Acton     | Development | 1986-08-10 |
+| 421304 | Acton     | Development | 1992-12-10 |
+|  32537 | Acton     | Development | 1995-10-14 |
+| 487536 | Acton     | Development | 1993-02-18 |
+| 261695 | Acton     | Development | 1988-07-07 |
+| 443826 | Acton     | Development | 1998-03-25 |
+|  38816 | Acton     | Development | 1994-09-21 |
+| 290111 | Acton     | Development | 1985-04-05 |
+| 284152 | Acton     | Development | 1990-01-25 |
+|  85120 | Acton     | Development | 1995-04-06 |
+|  46986 | Acton     | Development | 1992-07-11 |
+| 446536 | Acton     | Development | 1995-03-22 |
+| 220546 | Acton     | Development | 1999-10-20 |
+|  15229 | Acton     | Development | 1994-08-17 |
+|  66117 | Acton     | Development | 1994-01-14 |
+| 107735 | Acton     | Development | 1994-04-24 |
+|  34785 | Acton     | Development | 1985-06-02 |
+| 487025 | Adachi    | Development | 1987-06-27 |
+| 435487 | Adachi    | Development | 1998-11-30 |
+| 203716 | Adachi    | Development | 1997-05-14 |
+| 465285 | Adachi    | Development | 1985-10-10 |
+| 474264 | Adachi    | Development | 1994-01-16 |
+| 405140 | Adachi    | Development | 1985-08-15 |
+|  44898 | Adachi    | Development | 1996-03-22 |
+| 244018 | Adachi    | Development | 1992-05-19 |
+|  88521 | Adachi    | Development | 1998-06-30 |
++--------+-----------+-------------+------------+
+100 rows in set (0.46 sec)
+
+mysql> quit
+Bye
+cs45Student26@mint-server:~$ logout
+Connection to thekomanetskys.com closed.
+]0;linuxuser@linuxuser-virtual-machine: ~linuxuser@linuxuser-virtual-machine:~$ exit
+exit
+
+Script done on 2020-04-23 18:23:41-0700
